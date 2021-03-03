@@ -51,7 +51,11 @@ function getTranslation(element,lang) {
   xhttp.open("GET", q, false);
   xhttp.send();
 
-  element.innerText = "//Auto translated code using RemObjects Oxidizer. \n//Report translation errors on https://talk.remobjects.com/c/elements/oxidizer \n\n" + (new DOMParser).parseFromString(xhttp.responseText,"text/xml").documentElement.innerHTML;
+  if (xhttp.status == 200) {
+    element.innerText = "//Auto translated code using RemObjects Oxidizer. \n//Report translation errors on https://talk.remobjects.com/c/elements/oxidizer \n\n" + (new DOMParser).parseFromString(xhttp.responseText,"text/xml").documentElement.innerHTML;
+  } else {
+   element.innerText = "translator error:\n\n" + xhttp.responseText + "\n\n\Link was: " + q;
+  }
 };
 
 
