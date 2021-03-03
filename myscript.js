@@ -1,21 +1,27 @@
 var isVBtopic = document.head.innerHTML.includes("dotnet-visualbasic");
 if (!isVBtopic) {
+  var v1 = document.getElementsByClassName('primary-holder column is-two-thirds-tablet is-three-quarters-desktop');
+  var v = v1[0].getElementsByClassName('columns is-gapless-mobile has-large-gaps ');
+
   var b = document.createElement("button");
   b.innerText = "Translate C# To RemObjects Mercury";
-  var v = document.getElementsByClassName('mainContainer')
-  document.body.insertBefore(b, v[0]);
+  v1[0].insertBefore(b, v[0]);
 
   b.addEventListener("click", function() {changeCode('Mercury')});
 
   var b1 = document.createElement("button");
   b1.innerText = "Translate C# To RemObjects Oxygene";
-  document.body.insertBefore(b1, b);
+  v1[0].insertBefore(b1, b);
 
   b1.addEventListener("click", function() {changeCode('Oxygene')});
 
   var b2 = document.createElement("button");
   b2.innerText = "Translate C# To RemObjects Swift";
-  document.body.insertBefore(b2, b1);
+  v1[0].insertBefore(b2, b1);
+
+  var d = document.createElement("div");
+  d.innerText = "-";
+  v1[0].insertBefore(d, v[0]);
 
   b2.addEventListener("click", function() {changeCode('Swift')});
 };
@@ -37,9 +43,9 @@ function changeCode(lang) {
   b1.style.display = "none";
   b2.style.display = "none";
 
-  var d = document.createElement("center");
-  d.innerText = "Page is translated from C# to RemObjects " + lang + ". Refresh the page to get the original back.";
-  document.body.insertBefore(d, v[0]);
+  var dv = document.createElement("div");
+  dv.innerText = "Page is translated from C# to RemObjects " + lang + ". Refresh the page to get the original back.";
+  v1[0].insertBefore(dv, d);
 
 }; 
 
