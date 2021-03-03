@@ -53,7 +53,7 @@ function getTranslation(element,lang) {
   var csharp = element.innerHTML;
   var xhttp = new XMLHttpRequest();
 
-  var q = encodeURI("https://staging.remobjects.com/elements/oxidizer.asmx/Oxidize?code=" + element.innerText + "&sourceLanguage=hydrogene&targetLanguage=" + lang );
+  var q = "https://staging.remobjects.com/elements/oxidizer.asmx/Oxidize?code=" + encodeURIComponent(element.innerText) + "&sourceLanguage=hydrogene&targetLanguage=" + lang;
   xhttp.open("GET", q, false);
   xhttp.send();
 
