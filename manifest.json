@@ -1,7 +1,7 @@
 {
 "name":"Translate C# to a RemObjects language",
 "description":"Translates C# examples to Mercury VB, Oxygene Pascal or RemObjects Swift",
-"version":"1.0",
+"version":"0.1",
 "manifest_version":2,
 "permissions": ["https://staging.remobjects.com/"],
 "content_scripts": [
