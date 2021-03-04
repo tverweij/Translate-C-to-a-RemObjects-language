@@ -1,3 +1,8 @@
+////////////////////
+// translate page //
+////////////////////
+
+//docs.microsoft.com
 var isVBtopic = document.head.innerHTML.includes("dotnet-visualbasic");
 if (!isVBtopic) {
   var v1 = document.getElementsByClassName('primary-holder column is-two-thirds-tablet is-three-quarters-desktop');
@@ -63,5 +68,3 @@ function getTranslation(element,lang) {
    element.innerText = "translator error:\n\n" + xhttp.responseText + "\n\n\Link was: " + q;
   }
 };
-
-
