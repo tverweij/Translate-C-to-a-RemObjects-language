@@ -104,7 +104,7 @@ function getTranslation(element,lang) {
 
   if (xhttp.status == 200) {
     var code = (new DOMParser).parseFromString(xhttp.responseText,"text/xml").documentElement.innerHTML;
-    code = code.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+    code = code.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/&quot;/g, '"');
     if (!code.includes("//can't convert")) {
       element.innerText = "\n//Auto translated code using RemObjects Oxidizer. \n//Report translation errors on https://talk.remobjects.com/c/elements/oxidizer \n\n" + code;
     }
