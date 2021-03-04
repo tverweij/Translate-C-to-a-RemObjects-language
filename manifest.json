@@ -6,7 +6,7 @@
    "permissions": ["<all_urls>","webRequest","webRequestBlocking"],
    "content_scripts": [
       {
-      "matches": ["https://docs.microsoft.com/*"],
+      "matches": ["https://docs.microsoft.com/*", "https://stackoverflow.com/*"],
       "js": ["myscript.js"]
       }
    ],
