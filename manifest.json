@@ -1,12 +1,12 @@
 {
    "name":"Translate C# to a RemObjects language",
-   "description":"Translates C# examples on docs.microsoft.com to Mercury VB, Oxygene Pascal or RemObjects Swift",
-   "version":"1.0",
+   "description":"Translates C# examples to Mercury VB, Oxygene Pascal or RemObjects Swift",
+   "version":"1.1",
    "manifest_version":2,
    "permissions": ["<all_urls>","webRequest","webRequestBlocking"],
    "content_scripts": [
       {
-      "matches": ["https://docs.microsoft.com/*", "https://stackoverflow.com/*"],
+      "matches": ["https://docs.microsoft.com/*", "https://stackoverflow.com/*", "https://www.codeproject.com/*"],
       "js": ["myscript.js"]
       }
    ],
